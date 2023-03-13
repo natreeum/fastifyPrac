@@ -14,8 +14,9 @@ fastify.get('/badrequest', async (req, res) => {
 
 fastify.post('/', async (req, res) => {
   const body = req.body;
-  if (Object.keys(body).length == 0) return res.status(400).send('Bad Request');
-  return res.status(200).send({ body });
+  if (Object.keys(body).length != 1 || !body.message)
+    return res.status(400).send('Bad Request');
+  return res.status(200).send({ 'Your message': body.message });
 });
 
 const start = async () => {
