@@ -1,3 +1,6 @@
+### powered by https://www.fastify.io/
+
 # Fastify Practice
 
-### powered by https://www.fastify.io/
+1. install node dependencies
+<code>npm install</code>
